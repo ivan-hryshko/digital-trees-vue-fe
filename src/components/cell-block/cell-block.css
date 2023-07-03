@@ -1,0 +1,56 @@
+.block {
+  width: 30px;
+  height: 30px;
+  background: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  /* border-radius: 5px; */
+}
+
+.block:hover {
+  border: 5px dashed black;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.block--choosed {
+  border: 5px dashed black;
+  box-sizing: border-box;
+}
+
+.cellText{
+  filter: invert(1);
+}
+
+.create_block_animation {
+  animation: create_block 200ms;
+}
+
+.change_size_animation {
+  animation: change_size 200ms alternate;
+}
+
+
+@keyframes create_block {
+  0% {}
+  50% { background: none; }
+  100% { background: gray; }
+}
+
+@keyframes change_size {
+  0% {
+    width: 30px;
+    height: 30px;
+  }
+  50% {
+    width: 34px;
+    height: 34px;
+    margin: 0px;
+  }
+  100% {
+    width: 30px;
+    height: 30px;
+  }
+}
